@@ -6,6 +6,7 @@ const videoTrigger = document.getElementById("videoTrigger");
 const videoModal = document.getElementById("videoModal");
 const videoFrame = document.getElementById("videoFrame");
 const closeVideo = document.getElementById("closeVideo");
+const siteHeader = document.getElementById("siteHeader");
 
 menuToggle?.addEventListener("click", () => {
     const isOpen = !mobileMenu.hasAttribute("hidden");
@@ -61,3 +62,15 @@ document.addEventListener("keydown", (event) => {
         closeVideoModal();
     }
 });
+
+const toggleStickyHeader = () => {
+    if (!siteHeader) return;
+    if (window.scrollY >= 300) {
+        siteHeader.classList.add("sticky", "top-0", "z-40", "backdrop-blur", "bg-white/80", "shadow-sm");
+    } else {
+        siteHeader.classList.remove("sticky", "top-0", "z-40", "backdrop-blur", "bg-white/80", "shadow-sm");
+    }
+};
+
+toggleStickyHeader();
+window.addEventListener("scroll", toggleStickyHeader);

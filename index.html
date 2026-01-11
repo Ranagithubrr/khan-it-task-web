@@ -30,7 +30,7 @@
 </head>
 
 <body class="bg-gradient-to-r from-[#f0fbfd] to-[#fef8f7] font-sans text-slate-900">
-    <header class="bg-transparent">
+    <header class="bg-transparent" id="siteHeader">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
             <a class="flex items-center gap-2" href="#">
                 <img class="h-8 w-auto" src="src/assets/logo.png" alt="Khan IT">
@@ -45,10 +45,12 @@
                         <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-brand-600"></i>
                     </button>
                     <div
-                        class="invisible absolute left-0 top-full mt-2 w-44 rounded-md border border-brand-100 bg-white py-2 text-sm text-slate-700 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                        <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">Web Design</a>
-                        <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">SEO</a>
-                        <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">Marketing</a>
+                        class="invisible absolute left-0 top-full w-44 pt-2 opacity-0 transition pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto">
+                        <div class="rounded-md border border-brand-100 bg-white py-2 text-sm text-slate-700 shadow-lg">
+                            <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">Web Design</a>
+                            <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">SEO</a>
+                            <a class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600" href="#">Marketing</a>
+                        </div>
                     </div>
                 </div>
                 <a class="hover:text-brand-600" href="#">SEO Case study</a>
